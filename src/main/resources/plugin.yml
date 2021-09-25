@@ -1,0 +1,23 @@
+name: Test
+version: '${project.version}'
+main: jp.sophia.Sophia
+api-version: 1.17
+permissions:
+  test.command:
+    description: Allow for full or limtied command usage
+    children:
+      test.command.full: true
+  test.command.full:
+    description: Allow whole commands
+    default: op
+  test.command.limited:
+    description: Allow limited commands
+    default: op
+softdepend:
+  - LuckPerms
+  - Vault
+  - CMILib
+  - Jobs
+depend:
+  - Jobs
+  - LuckPerms
